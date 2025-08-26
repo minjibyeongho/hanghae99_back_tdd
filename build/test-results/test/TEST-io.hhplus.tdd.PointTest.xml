@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.hhplus.tdd.PointTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-08-26T15:10:18" hostname="minbyeonghoui-MacBookPro.local" time="0.571">
+  <properties/>
+  <testcase name="포인트 충전(잔여금 없을때)" classname="io.hhplus.tdd.PointTest" time="0.517"/>
+  <testcase name="포인트 충전/사용 내역 조회" classname="io.hhplus.tdd.PointTest" time="0.042"/>
+  <testcase name="포인트 사용(잔여금 없을때) - 에러" classname="io.hhplus.tdd.PointTest" time="0.003"/>
+  <testcase name="포인트 조회 테스트" classname="io.hhplus.tdd.PointTest" time="0.001"/>
+  <testcase name="포인트 사용(잔여금 존재)" classname="io.hhplus.tdd.PointTest" time="0.001"/>
+  <testcase name="포인트 충전(잔여금 존재)" classname="io.hhplus.tdd.PointTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

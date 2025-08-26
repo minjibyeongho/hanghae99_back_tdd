@@ -53,6 +53,4 @@ public class PointServiceImpl implements PointService {
         // 3. 포인트 사용
         return userPointTable.insertOrUpdate(id, userPoint.point() - amount);
     }
-
-
 }
