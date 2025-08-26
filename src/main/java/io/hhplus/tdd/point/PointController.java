@@ -1,7 +1,9 @@
 package io.hhplus.tdd.point;
 
+import io.hhplus.tdd.point.Service.PointService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,6 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/point")
 public class PointController {
+
+    @Autowired
+    private PointService pointService;
 
     private static final Logger log = LoggerFactory.getLogger(PointController.class);
 
@@ -19,7 +24,7 @@ public class PointController {
     public UserPoint point(
             @PathVariable long id
     ) {
-        return new UserPoint(0, 0, 0);
+        return pointService.getUserPoint(id);
     }
 
     /**
@@ -29,7 +34,7 @@ public class PointController {
     public List<PointHistory> history(
             @PathVariable long id
     ) {
-        return List.of();
+        return pointService.getUserPointHistory(id);
     }
 
     /**
@@ -40,7 +45,7 @@ public class PointController {
             @PathVariable long id,
             @RequestBody long amount
     ) {
-        return new UserPoint(0, 0, 0);
+        return pointService.addUserPoint(id, amount);
     }
 
     /**
@@ -51,6 +56,6 @@ public class PointController {
             @PathVariable long id,
             @RequestBody long amount
     ) {
-        return new UserPoint(0, 0, 0);
+        return pointService.useUserPoint(id, amount);
     }
 }
